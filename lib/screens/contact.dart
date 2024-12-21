@@ -301,10 +301,12 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
         );
 
         // Close the loading dialog
+        // ignore: use_build_context_synchronously
         Navigator.of(context).pop();
 
         if (response.statusCode == 200) {
           // Show success message
+          // ignore: use_build_context_synchronously
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Your query has been submitted successfully!'),
