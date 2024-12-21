@@ -136,7 +136,7 @@ class ResultsScreen extends StatelessWidget {
 
               // Action Buttons
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/pcosResources'),
+                onPressed: () => Navigator.pushNamed(context, '/moreInfo'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
@@ -148,7 +148,7 @@ class ResultsScreen extends StatelessWidget {
                   elevation: 0,
                 ),
                 child: const Text(
-                  'Learn More About PCOS',
+                  'More information',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

@@ -65,17 +65,17 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
             const SizedBox(height: 20),
             Text(
               'Question ${currentIndex + 1}/${pcosQuestions.length}',
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
-            
+
             // Question
             Text(
               currentQuestion.questionText,
               style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
-            
+
             // Options
             for (int i = 0; i < currentQuestion.options.length; i++)
               RadioListTile<int>(
@@ -107,9 +107,9 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
                       ? null
                       : _onNext, // disable if no option selected
                   child: Text(
-                    currentIndex < pcosQuestions.length - 1 
-                      ? 'Next' 
-                      : 'Submit Assessment',
+                    currentIndex < pcosQuestions.length - 1
+                        ? 'Next'
+                        : 'Submit Assessment',
                   ),
                 ),
               ],
