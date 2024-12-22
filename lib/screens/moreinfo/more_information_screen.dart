@@ -9,6 +9,9 @@ class MoreInformationScreen extends StatelessWidget {
     const String contactUsRoute = '/contact';
     const String pcosInfoRoute = '/pcosResources';
     const String aboutUsRoute = '/about';
+    // New routes added for demonstration
+    const String pcosFaqsRoute = '/pcosFaqs';
+    const String realLifeStoriesRoute = '/realLifeStories';
 
     return Scaffold(
       appBar: AppBar(
@@ -49,6 +52,24 @@ class MoreInformationScreen extends StatelessWidget {
             title: 'About Us',
             description: 'Discover our mission, values, and team.',
             onTap: () => Navigator.pushNamed(context, aboutUsRoute),
+          ),
+          const SizedBox(height: 12),
+
+          // NEW BUTTON: PCOS Information and FAQs
+          _InfoCard(
+            icon: Icons.question_answer,
+            title: 'PCOS Information & FAQs',
+            description: 'Common questions and detailed answers about PCOS.',
+            onTap: () => Navigator.pushNamed(context, pcosFaqsRoute),
+          ),
+          const SizedBox(height: 12),
+
+          // NEW BUTTON: Real Life Stories
+          _InfoCard(
+            icon: Icons.favorite_outline,
+            title: 'Real Life Stories',
+            description: 'Inspirational journeys and success stories.',
+            onTap: () => Navigator.pushNamed(context, realLifeStoriesRoute),
           ),
         ],
       ),

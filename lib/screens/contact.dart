@@ -316,13 +316,13 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           _formKey.currentState!.reset();
         } else {
           // Show error message
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(
-                'Error ${response.statusCode}: Could not submit your query.',
-              ),
-            ),
-          );
+          // ScaffoldMessenger.of(context).showSnackBar(
+          //   SnackBar(
+          //     content: Text(
+          //       'Error ${response.statusCode}: Could not submit your query.',
+          //     ),
+          //   ),
+          // );
         }
       } catch (e) {
         Navigator.of(context).pop(); // Close loading

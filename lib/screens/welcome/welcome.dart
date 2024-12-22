@@ -24,8 +24,9 @@ class WelcomeScreen extends StatelessWidget {
               // Main Heading
               const Text(
                 'PCOS Symptom Assessment',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 26,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
@@ -70,48 +71,6 @@ class WelcomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   ElevatedButton(
-                    onPressed: () => Navigator.pushNamed(context, '/login'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.black,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        side: const BorderSide(color: Colors.black12),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: const Text(
-                      'Login',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  ElevatedButton(
-                    onPressed: () => Navigator.pushNamed(context, '/register'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.black,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        side: const BorderSide(color: Colors.black12),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: const Text(
-                      'Create Account',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  ElevatedButton(
                     onPressed: () =>
                         Navigator.pushNamed(context, '/questionnaire'),
                     style: ElevatedButton.styleFrom(
@@ -125,7 +84,28 @@ class WelcomeScreen extends StatelessWidget {
                       elevation: 0,
                     ),
                     child: const Text(
-                      'Start Assessment as Guest',
+                      'Start assessment for PCOS',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () => Navigator.pushNamed(context, '/moreInfo'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        side: const BorderSide(color: Colors.black12),
+                      ),
+                      elevation: 0,
+                    ),
+                    child: const Text(
+                      'More information',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,

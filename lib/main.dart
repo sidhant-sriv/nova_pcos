@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nova_pcos/resources.dart';
 import 'package:nova_pcos/screens/contact.dart';
 import 'package:nova_pcos/screens/moreinfo/more_information_screen.dart';
+import 'package:nova_pcos/screens/pcos_info_screen.dart';
+import 'package:nova_pcos/screens/real_life_screen.dart';
 import 'package:nova_pcos/screens/results/results.dart';
 import 'package:nova_pcos/screens/welcome/welcome.dart';
 import 'package:nova_pcos/screens/questionnaire/questionnaire_screen.dart';
@@ -45,7 +47,8 @@ class PCOSApp extends StatelessWidget {
         //TODO: Add routes for other screens
         '/register': (context) => const Placeholder(),
         '/login': (context) => const Placeholder(),
-
+        '/pcosFaqs': (context) => const PcosInfoFaqScreen(),
+        '/realLifeStories': (context) => const RealLifeStoriesScreen(),
         '/about': (context) => const Placeholder(),
       },
     );
