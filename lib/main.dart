@@ -20,7 +20,9 @@ class PCOSApp extends StatelessWidget {
     return MaterialApp(
       title: 'PCOS Symptom Assessment',
       theme: ThemeData(
-        primarySwatch: const Color.fromARGB(255, 163, 13, 61),
+        primaryColor: const Color.fromARGB(255, 163, 13, 61),
+        primarySwatch: Colors.red, // Fallback for widgets that use the primary swatch
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 163, 13, 61)),
         fontFamily: 'Proxima Nova',
       ),
       initialRoute: '/',
