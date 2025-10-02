@@ -1,13 +1,15 @@
 {
-    "name": "nova_pcos",
-    "short_name": "nova_pcos",
+    "name": "PCOS Symptom Assessment Tool - Nova IVF Fertility",
+    "short_name": "Nova IVF PCOS",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#a30d3d",
+    "theme_color": "#a30d3d",
+    "description": "PCOS calculator developed by Nova IVF Fertility in partnership with Anusha Nigam. Take our comprehensive symptom assessment questionnaire and get personalized health insights.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
+    "categories": ["health", "medical", "lifestyle"],
+    "lang": "en",
     "icons": [
         {
             "src": "icons/Icon-192.png",

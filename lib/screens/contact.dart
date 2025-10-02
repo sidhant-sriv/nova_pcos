@@ -301,12 +301,12 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
         );
 
         // Close the loading dialog
-        // ignore: use_build_context_synchronously
+        if (!mounted) return;
         Navigator.of(context).pop();
 
         if (response.statusCode == 200) {
           // Show success message
-          // ignore: use_build_context_synchronously
+          if (!mounted) return;
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Your query has been submitted successfully!'),
@@ -325,6 +325,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           // );
         }
       } catch (e) {
+        if (!mounted) return;
         Navigator.of(context).pop(); // Close loading
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(

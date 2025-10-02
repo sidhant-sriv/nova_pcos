@@ -65,7 +65,6 @@ class RealLifeStoriesScreen extends StatelessWidget {
           // "Share Your Story" Button
           ElevatedButton(
             onPressed: () {
-              // TODO: Implement functionality for users to share their story
               // Example: Navigator.pushNamed(context, '/shareStory');
             },
             child: const Text('Share Your Story'),

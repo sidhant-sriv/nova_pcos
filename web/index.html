@@ -18,21 +18,177 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="PCOS Symptom Assessment Tool by Nova IVF Fertility - Developed in partnership with Anusha Nigam, a high school student passionate about women's health. Take our comprehensive questionnaire to assess PCOS symptoms and get personalized insights.">
+  <meta name="keywords" content="PCOS, polycystic ovary syndrome, symptom assessment, women's health, questionnaire, health screening, reproductive health, Nova IVF, Anusha Nigam, fertility clinic, AI healthcare, early diagnosis">
+  <meta name="author" content="Nova IVF Fertility & Anusha Nigam">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Performance and Loading Hints -->
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="PCOS Symptom Assessment Tool - Nova IVF Fertility Partnership">
+  <meta property="og:description" content="PCOS calculator developed by Nova IVF Fertility in partnership with Anusha Nigam. Take our comprehensive symptom assessment questionnaire and get personalized health insights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.novaivffertility.com/">
+  <meta property="og:image" content="icons/Icon-512.png">
+  <meta property="og:site_name" content="Nova IVF Fertility">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PCOS Assessment Tool - Nova IVF & Anusha Nigam Partnership">
+  <meta name="twitter:description" content="PCOS calculator developed by Nova IVF Fertility in partnership with Anusha Nigam, a high school student passionate about women's health and AI healthcare innovation.">
+  <meta name="twitter:image" content="icons/Icon-512.png">
+  
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="nova_pcos">
+  <meta name="apple-mobile-web-app-title" content="Nova PCOS">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
 
-  <title>nova_pcos</title>
+  <title>PCOS Symptom Assessment Tool - Nova IVF Fertility Partnership</title>
   <link rel="manifest" href="manifest.json">
+  
+  <!-- Preload critical resources for better performance -->
+  <link rel="preload" href="flutter_bootstrap.js" as="script">
+  <link rel="preload" href="main.dart.js" as="script">
+  <link rel="preload" href="icons/Icon-192.png" as="image">
+  <link rel="preload" href="assets/assets/fonts/ProximaNova-Regular.otf" as="font" type="font/otf" crossorigin>
+  
+  <!-- Networking and canvas hints -->
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
+  <link rel="preload" href="canvaskit/canvaskit.wasm" as="fetch" type="application/wasm" crossorigin>
+  <link rel="preload" href="canvaskit/canvaskit.js" as="script" crossorigin>
+  
+  <!-- Lazy load non-critical images -->
+  <link rel="preload" href="assets/assets/images/nova-logo.png" as="image" media="(min-width: 768px)">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PCOS Symptom Assessment Tool",
+    "description": "A comprehensive questionnaire to assess PCOS symptoms and provide personalized health insights for women. Developed in partnership with Nova IVF Fertility.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Nova IVF Fertility",
+      "url": "https://www.novaivffertility.com/",
+      "description": "India's No.1 fertility clinic with highest success rates"
+    },
+    "contributor": {
+      "@type": "Person",
+      "name": "Anusha Nigam",
+      "description": "Junior at Centennial High School, Frisco, TX, USA - PCOS awareness advocate and AI healthcare innovator"
+    },
+    "keywords": "PCOS, polycystic ovary syndrome, symptom assessment, women's health, questionnaire, health screening, Nova IVF, Anusha Nigam, fertility clinic, AI healthcare"
+  }
+  </script>
+  
+  <!-- Additional Structured Data for Partnership and About Section -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "PCOS Symptom Assessment Tool - About",
+    "description": "Learn about the PCOS calculator developed in partnership between Nova IVF Fertility and Anusha Nigam, a high school student passionate about women's health and AI-driven healthcare solutions.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Nova IVF Fertility",
+      "url": "https://www.novaivffertility.com/",
+      "description": "India's No.1 fertility clinic with highest success rates, offering comprehensive fertility treatments including PCOS management",
+      "medicalSpecialty": "Reproductive Medicine",
+      "hasCredential": "India's leading fertility provider following international protocols"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Anusha Nigam",
+      "description": "Junior at Centennial High School in Frisco, TX, USA. PCOS awareness advocate and AI healthcare innovator",
+      "affiliation": "Centennial High School, Frisco, TX",
+      "knowsAbout": ["PCOS Awareness", "AI Healthcare", "Women's Health", "Early Diagnosis"]
+    },
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Polycystic Ovary Syndrome (PCOS)",
+      "description": "A common hormonal disorder affecting 1 in 7 women worldwide, characterized by irregular periods, excess androgen levels, and polycystic ovaries"
+    }
+  }
+  </script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <!-- Minimal inline splash to improve FCP while Flutter boots -->
+  <style>
+    .splash-container{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#ffffff;color:#1a1a1a;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    .splash-inner{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .splash-logo{width:96px;height:96px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);object-fit:contain}
+    .splash-text{font-weight:600;letter-spacing:.2px}
+    .skeleton{width:220px;height:10px;border-radius:6px;background:linear-gradient(90deg,rgba(0,0,0,.06) 25%,rgba(0,0,0,.12) 37%,rgba(0,0,0,.06) 63%);background-size:400% 100%;animation:shimmer 1.4s ease-in-out infinite}
+    @keyframes shimmer{0%{background-position:100% 0}100%{background-position:0 0}}
+    .hide{opacity:0;pointer-events:none;transition:opacity .24s ease}
+  </style>
+  <div id="splash" class="splash-container" role="status" aria-live="polite">
+    <div class="splash-inner">
+      <img class="splash-logo" src="icons/Icon-192.png" alt="Nova PCOS" width="96" height="96" />
+      <div class="splash-text">Loading…</div>
+      <div class="skeleton" aria-hidden="true"></div>
+    </div>
+  </div>
+  <!-- Load Flutter with optimized script loading -->
+  <script>
+    // Preload critical Flutter resources
+    const script = document.createElement('script');
+    script.src = 'flutter_bootstrap.js';
+    script.async = true;
+    script.defer = true;
+    script.crossOrigin = 'anonymous';
+    document.head.appendChild(script);
+    
+    // Lazy load non-critical resources
+    window.addEventListener('load', function() {
+      // Load additional resources after initial page load
+      const additionalResources = [
+        'assets/assets/images/anusha.png',
+        'icons/Icon-512.png'
+      ];
+      
+      additionalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
+    });
+
+    // Hide splash on Flutter first frame
+    (function hideSplashOnFirstFrame(){
+      const splash = document.getElementById('splash');
+      // Flutter injects a canvas; when first frame is rendered it dispatches this event
+      window.addEventListener('flutter-first-frame', function(){
+        if(splash){ splash.classList.add('hide'); setTimeout(()=>{ splash.remove(); }, 260); }
+      });
+      // Fallback timeout in case event doesn't fire (avoid TBT impact)
+      setTimeout(function(){ if(splash){ splash.classList.add('hide'); setTimeout(()=>{ splash.remove(); }, 260); } }, 12000);
+    })();
+  </script>
 </body>
 </html>

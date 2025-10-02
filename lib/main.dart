@@ -29,8 +29,6 @@ class PCOSApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomeScreen(),
-        // '/register': (context) => const RegistrationScreen(),
-        // '/login': (context) => const LoginScreen(),
         '/questionnaire': (context) => const QuestionnaireScreen(),
         '/results': (context) => const ResultsScreen(),
         '/moreInfo': (context) => const MoreInformationScreen(),
@@ -38,8 +36,6 @@ class PCOSApp extends StatelessWidget {
         '/pcosResources': (context) => const PcosResourcesScreen(),
         '/pcosFaqs': (context) => const PcosInfoFaqScreen(),
         '/realLifeStories': (context) => const RealLifeStoriesScreen(),
-        //TODO: Add routes for other screens
-
         '/about': (context) => const AboutScreen(),
       },
     );

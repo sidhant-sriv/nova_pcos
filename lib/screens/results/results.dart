@@ -83,7 +83,7 @@ class ResultsScreen extends StatelessWidget {
                         vertical: 8,
                       ),
                       decoration: BoxDecoration(
-                        color: _getStatusColor(totalScore).withOpacity(0.1),
+                        color: _getStatusColor(totalScore).withValues(alpha: .1),
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: Text(
