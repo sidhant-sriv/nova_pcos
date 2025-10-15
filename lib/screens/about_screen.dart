@@ -24,7 +24,7 @@ class AboutScreen extends StatelessWidget {
                   ),
             ),
             const SizedBox(height: 24),
-            
+
             // Profile Image
             Container(
               width: 200,
@@ -50,7 +50,7 @@ class AboutScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            
+
             // Contribution Information
             Container(
               padding: const EdgeInsets.all(20),

@@ -36,7 +36,7 @@
   <meta property="og:title" content="PCOS Symptom Assessment Tool - Nova IVF Fertility Partnership">
   <meta property="og:description" content="PCOS calculator developed by Nova IVF Fertility in partnership with Anusha Nigam. Take our comprehensive symptom assessment questionnaire and get personalized health insights.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.novaivffertility.com/">
+  <meta property="og:url" content="https://www.novaivffertility.com/nova-pcos-calculator">
   <meta property="og:image" content="icons/Icon-512.png">
   <meta property="og:site_name" content="Nova IVF Fertility">
   
@@ -84,6 +84,7 @@
     "description": "A comprehensive questionnaire to assess PCOS symptoms and provide personalized health insights for women. Developed in partnership with Nova IVF Fertility.",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "Web Browser",
+    "url": "https://www.novaivffertility.com/nova-pcos-calculator",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -100,7 +101,13 @@
       "name": "Anusha Nigam",
       "description": "Junior at Centennial High School, Frisco, TX, USA - PCOS awareness advocate and AI healthcare innovator"
     },
-    "keywords": "PCOS, polycystic ovary syndrome, symptom assessment, women's health, questionnaire, health screening, Nova IVF, Anusha Nigam, fertility clinic, AI healthcare"
+    "keywords": "PCOS, polycystic ovary syndrome, symptom assessment, women's health, questionnaire, health screening, Nova IVF, Anusha Nigam, fertility clinic, AI healthcare",
+    "relatedLink": {
+      "@type": "WebPage",
+      "name": "About PCOS App",
+      "url": "https://www.novaivffertility.com/about-pcos-app",
+      "description": "Learn more about PCOS management, treatment options, and expert care at Nova IVF Fertility"
+    }
   }
   </script>
   
@@ -111,6 +118,7 @@
     "@type": "MedicalWebPage",
     "name": "PCOS Symptom Assessment Tool - About",
     "description": "Learn about the PCOS calculator developed in partnership between Nova IVF Fertility and Anusha Nigam, a high school student passionate about women's health and AI-driven healthcare solutions.",
+    "url": "https://www.novaivffertility.com/nova-pcos-calculator",
     "mainEntity": {
       "@type": "Organization",
       "name": "Nova IVF Fertility",
@@ -130,28 +138,17 @@
       "@type": "MedicalCondition",
       "name": "Polycystic Ovary Syndrome (PCOS)",
       "description": "A common hormonal disorder affecting 1 in 7 women worldwide, characterized by irregular periods, excess androgen levels, and polycystic ovaries"
+    },
+    "relatedLink": {
+      "@type": "WebPage",
+      "name": "About PCOS App",
+      "url": "https://www.novaivffertility.com/about-pcos-app",
+      "description": "Comprehensive information about PCOS management and treatment options"
     }
   }
   </script>
 </head>
 <body>
-  <!-- Minimal inline splash to improve FCP while Flutter boots -->
-  <style>
-    .splash-container{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#ffffff;color:#1a1a1a;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    .splash-inner{display:flex;flex-direction:column;align-items:center;gap:12px}
-    .splash-logo{width:96px;height:96px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);object-fit:contain}
-    .splash-text{font-weight:600;letter-spacing:.2px}
-    .skeleton{width:220px;height:10px;border-radius:6px;background:linear-gradient(90deg,rgba(0,0,0,.06) 25%,rgba(0,0,0,.12) 37%,rgba(0,0,0,.06) 63%);background-size:400% 100%;animation:shimmer 1.4s ease-in-out infinite}
-    @keyframes shimmer{0%{background-position:100% 0}100%{background-position:0 0}}
-    .hide{opacity:0;pointer-events:none;transition:opacity .24s ease}
-  </style>
-  <div id="splash" class="splash-container" role="status" aria-live="polite">
-    <div class="splash-inner">
-      <img class="splash-logo" src="icons/Icon-192.png" alt="Nova PCOS" width="96" height="96" />
-      <div class="splash-text">Loading…</div>
-      <div class="skeleton" aria-hidden="true"></div>
-    </div>
-  </div>
   <!-- Load Flutter with optimized script loading -->
   <script>
     // Preload critical Flutter resources
@@ -178,17 +175,6 @@
         document.head.appendChild(link);
       });
     });
-
-    // Hide splash on Flutter first frame
-    (function hideSplashOnFirstFrame(){
-      const splash = document.getElementById('splash');
-      // Flutter injects a canvas; when first frame is rendered it dispatches this event
-      window.addEventListener('flutter-first-frame', function(){
-        if(splash){ splash.classList.add('hide'); setTimeout(()=>{ splash.remove(); }, 260); }
-      });
-      // Fallback timeout in case event doesn't fire (avoid TBT impact)
-      setTimeout(function(){ if(splash){ splash.classList.add('hide'); setTimeout(()=>{ splash.remove(); }, 260); } }, 12000);
-    })();
   </script>
 </body>
 </html>

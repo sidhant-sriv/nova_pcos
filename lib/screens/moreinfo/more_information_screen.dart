@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MoreInformationScreen extends StatelessWidget {
   const MoreInformationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Adjust these routes to match your app’s named routes
+    // Adjust these routes to match your app's named routes
     const String contactUsRoute = '/contact';
     const String pcosInfoRoute = '/pcosResources';
-    const String aboutUsRoute = '/about';
+    const String aboutUsUrl = 'https://www.novaivffertility.com/about-pcos-app';
     // New routes added for demonstration
     const String pcosFaqsRoute = '/pcosFaqs';
     const String realLifeStoriesRoute = '/realLifeStories';
@@ -50,8 +51,9 @@ class MoreInformationScreen extends StatelessWidget {
           _InfoCard(
             icon: Icons.people_outline,
             title: 'About Us',
-            description: 'Discover our mission, values, and team.',
-            onTap: () => Navigator.pushNamed(context, aboutUsRoute),
+            description:
+                'Learn more about the PCOS app and Nova IVF Fertility.',
+            onTap: () => _launchExternalURL(aboutUsUrl),
           ),
           const SizedBox(height: 12),
 
@@ -74,6 +76,16 @@ class MoreInformationScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _launchExternalURL(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      // Fallback for web - just open in same tab
+      await launchUrl(url, mode: LaunchMode.platformDefault);
+    }
   }
 }
 
